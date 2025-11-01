@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === BRAND TOKENS ===
+   Replace these RGB values with your brand colors.
+   Example: --brand: 9 83 110;  (for #219EBC)
+*/
+:root {
+  --brand: 30 41 59;              /* primary - dark slate */
+  --brand-foreground: 255 255 255;  /* on-primary text */
+  --brand-muted: 51 65 85;       /* soft tint for backgrounds */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-800 antialiased;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.container-p {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  @apply relative w-full min-h-[500px] flex items-center justify-center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-black/40;
+}
+
+.hero-content {
+  @apply relative z-10 text-center text-white px-4;
+}
+
+.hero-title {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Dark Section Styles */
+.section-dark {
+  @apply bg-black text-white py-16 w-full;
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p {
+  @apply text-white;
+}
+
+/* Light Section Styles */
+.section-light {
+  @apply bg-white text-gray-900 py-16 w-full;
+}
+
+/* Content Container */
+.content-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-full px-8 py-3 text-base font-semibold border-2 border-white text-white transition hover:bg-white hover:text-black;
+  background: transparent;
+}
+
+.btn-solid {
+  @apply inline-flex items-center gap-2 rounded-md px-6 py-3 text-base font-semibold shadow-soft transition hover:translate-y-[-1px];
+  background: rgb(var(--brand));
+  color: rgb(var(--brand-foreground));
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold border transition;
+  border-color: rgb(var(--brand));
+  color: rgb(var(--brand));
+}
+
+.card {
+  @apply rounded-xl border border-gray-200 bg-white p-6 shadow-soft;
+}
+
+/* Center aligned text sections */
+.text-section-center {
+  @apply text-center max-w-5xl mx-auto;
+}
+
+.text-section-center h2 {
+  @apply text-3xl md:text-4xl font-bold mb-6;
+}
+
+.text-section-center p {
+  @apply text-lg leading-relaxed mb-4;
+}
