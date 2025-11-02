@@ -2,8 +2,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Header() {
+  const { language, setLanguage, t } = useLanguage()
   const [scrolled, setScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
 
@@ -21,20 +23,21 @@ export function Header() {
     <header className={`${scrolled ? 'bg-[#001f3f]/95 backdrop-blur' : 'bg-[#001f3f]/90 backdrop-blur'} sticky top-0 z-50 transition-colors duration-300`}>
       <div className="container mx-auto px-6 flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo" width={48} height={48} className="rounded-full" />
+        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Image src="/logo_for_header.png" alt="BullDiving Logo" width={80} height={80} className="object-contain" />
+          <span className="text-white font-bold text-2xl tracking-tight">BullDiving</span>
         </Link>
 
         {/* Navigation */}
         <nav className="flex items-center gap-8 text-sm font-medium">
           {/* Supply Dropdown */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('supply')}
             onMouseLeave={handleMouseLeave}
           >
             <button className="flex items-center gap-1 text-white hover:text-gray-300 transition-colors">
-              Supply
+              {t('nav.supply')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -57,13 +60,13 @@ export function Header() {
           </div>
 
           {/* Service Center Dropdown */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('service')}
             onMouseLeave={handleMouseLeave}
           >
             <button className="flex items-center gap-1 text-white hover:text-gray-300 transition-colors">
-              Service Center
+              {t('nav.serviceCenter')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -90,7 +93,7 @@ export function Header() {
                   EBS
                 </Link>
                 <Link href="/services" className="block px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors font-semibold border-t border-gray-100 mt-2 pt-3">
-                  All Services
+                  {t('nav.allServices')}
                 </Link>
                 </div>
               </div>
@@ -98,13 +101,13 @@ export function Header() {
           </div>
 
           {/* Training Dropdown */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('training')}
             onMouseLeave={handleMouseLeave}
           >
             <button className="flex items-center gap-1 text-white hover:text-gray-300 transition-colors">
-              Training
+              {t('nav.training')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -127,13 +130,13 @@ export function Header() {
           </div>
 
           {/* About Dropdown */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => handleMouseEnter('about')}
             onMouseLeave={handleMouseLeave}
           >
             <button className="flex items-center gap-1 text-white hover:text-gray-300 transition-colors">
-              About
+              {t('nav.about')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -142,13 +145,10 @@ export function Header() {
               <div className="absolute top-full left-0 pt-2">
                 <div className="w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                 <Link href="/about" className="block px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors">
-                  Our Story
-                </Link>
-                <Link href="/about/team" className="block px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors">
-                  Team
+                  {t('nav.ourStory')}
                 </Link>
                 <Link href="/contact" className="block px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function Header() {
             onMouseLeave={handleMouseLeave}
           >
             <button className="flex items-center gap-1 text-white">
-              <span className="text-xl">🇺🇸</span>
+              <span className="text-xl">{language === 'en' ? '🇺🇸' : '🇪🇸'}</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -170,10 +170,16 @@ export function Header() {
             {openDropdown === 'language' && (
               <div className="absolute top-full right-0 pt-2">
                 <div className="w-40 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
-                <button className="w-full text-left px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors flex items-center gap-2">
+                <button
+                  onClick={() => { setLanguage('en'); setOpenDropdown(null); }}
+                  className="w-full text-left px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors flex items-center gap-2"
+                >
                   <span className="text-xl">🇺🇸</span> English
                 </button>
-                <button className="w-full text-left px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors flex items-center gap-2">
+                <button
+                  onClick={() => { setLanguage('es'); setOpenDropdown(null); }}
+                  className="w-full text-left px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-brand transition-colors flex items-center gap-2"
+                >
                   <span className="text-xl">🇪🇸</span> Español
                 </button>
                 </div>

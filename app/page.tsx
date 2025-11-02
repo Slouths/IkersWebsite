@@ -2,30 +2,32 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function HomePage() {
+  const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const heroImages = [
     {
       url: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?q=80&w=2070',
-      title: 'Professional Diving Equipment Service',
-      subtitle: 'Expert maintenance and repair for all your diving gear'
+      titleKey: 'home.hero.title1',
+      subtitleKey: 'home.hero.subtitle1'
     },
     {
       url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070',
-      title: 'Certified Technicians',
-      subtitle: 'Official Poseidon Service Center with factory-trained specialists'
+      titleKey: 'home.hero.title2',
+      subtitleKey: 'home.hero.subtitle2'
     },
     {
       url: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2074',
-      title: 'Complete Equipment Solutions',
-      subtitle: 'From regulators to rebreathers, we service it all'
+      titleKey: 'home.hero.title3',
+      subtitleKey: 'home.hero.subtitle3'
     },
     {
       url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070',
-      title: 'Trusted by Professionals',
-      subtitle: 'Serving dive teams, fire departments, and special forces worldwide'
+      titleKey: 'home.hero.title4',
+      subtitleKey: 'home.hero.subtitle4'
     }
   ]
 
@@ -56,23 +58,25 @@ export default function HomePage() {
             <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
               <div className="max-w-5xl">
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-2xl">
-                  {image.title}
+                  {t(image.titleKey)}
                 </h1>
-                <p className="text-xl md:text-3xl text-white/90 mb-12 drop-shadow-lg">
-                  {image.subtitle}
+                <p className="text-xl md:text-3xl text-white/90 drop-shadow-lg">
+                  {t(image.subtitleKey)}
                 </p>
-                <div className="flex gap-6 justify-center flex-wrap">
-                  <Link href="/services" className="btn text-lg px-10 py-4">
-                    Our Services
-                  </Link>
-                  <Link href="/contact" className="btn text-lg px-10 py-4">
-                    Get in Touch
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
         ))}
+
+        {/* Buttons - Fixed Position */}
+        <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 z-20 flex gap-6 justify-center flex-wrap">
+          <Link href="/services" className="btn text-lg px-10 py-4">
+            {t('home.hero.ourServices')}
+          </Link>
+          <Link href="/contact" className="btn text-lg px-10 py-4">
+            {t('home.hero.getInTouch')}
+          </Link>
+        </div>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
@@ -88,8 +92,8 @@ export default function HomePage() {
         </div>
 
         {/* Wave SVG Divider */}
-        <div className="absolute bottom-0 left-0 w-full">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full">
+        <div className="absolute bottom-0 left-0 w-full" style={{ marginBottom: '-1px' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" className="w-full block">
             <path
               fill="#001f3f"
               fillOpacity="1"
@@ -102,28 +106,22 @@ export default function HomePage() {
       {/* Dark Section - About with Ocean Gradient */}
       <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #001f3f 0%, #003d5c 100%)' }}>
         <div className="content-container text-section-center py-24 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">The New Generation of Diving Services</h2>
-          <p className="text-lg md:text-xl mb-6 max-w-4xl mx-auto text-white/90">
-            At BullDiving, we provide <strong>unparalleled service and expertise</strong> with certified technicians who specialize
-            in maintaining and repairing professional diving equipment.
-          </p>
-          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto text-white/90">
-            From regulators and drysuits to CCRs and emergency breathing systems, we handle everything with the
-            <strong> highest standards of quality and precision</strong>.
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-white">{t('home.about.title')}</h2>
+          <p className="text-lg md:text-xl mb-6 max-w-4xl mx-auto text-white/90" dangerouslySetInnerHTML={{ __html: t('home.about.text1') }} />
+          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto text-white/90" dangerouslySetInnerHTML={{ __html: t('home.about.text2') }} />
 
           <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
             <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">15+</div>
-              <p className="text-lg text-white/80">Years Experience</p>
+              <p className="text-lg text-white/80">{t('home.about.yearsExperience')}</p>
             </div>
             <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">1000+</div>
-              <p className="text-lg text-white/80">Equipment Serviced</p>
+              <p className="text-lg text-white/80">{t('home.about.equipmentServiced')}</p>
             </div>
             <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">100%</div>
-              <p className="text-lg text-white/80">Satisfaction Rate</p>
+              <p className="text-lg text-white/80">{t('home.about.satisfactionRate')}</p>
             </div>
           </div>
         </div>
@@ -133,10 +131,9 @@ export default function HomePage() {
       <section className="section-light relative">
         <div className="content-container">
           <div className="text-section-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#001f3f]">Comprehensive Equipment Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#001f3f]">{t('home.services.title')}</h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-              We specialize in maintaining mission-critical diving equipment for individual divers, professional teams,
-              fire departments, and specialized underwater units.
+              {t('home.services.subtitle')}
             </p>
           </div>
 
@@ -144,7 +141,7 @@ export default function HomePage() {
             {[
               {
                 title: 'Regulators',
-                desc: 'Official Poseidon Service Center. Full maintenance for all brands.',
+                desc: 'Certified technicians. Full maintenance for all brands.',
                 link: '/services/regulators'
               },
               {
@@ -154,7 +151,7 @@ export default function HomePage() {
               },
               {
                 title: 'CCR',
-                desc: 'Authorized rebreather servicing. Poseidon Pro Academy specialists.',
+                desc: 'Authorized rebreather servicing by certified specialists.',
                 link: '/services/ccr'
               },
               {
@@ -216,8 +213,7 @@ export default function HomePage() {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
               <h3 className="text-2xl font-bold mb-4 text-white">Certified Technicians</h3>
               <p className="text-lg leading-relaxed text-white/80">
-                Our team includes factory-certified technicians trained by leading manufacturers. Official Poseidon Service Center
-                with expertise across all major brands.
+                Our team includes factory-certified technicians trained by leading manufacturers with expertise across all major brands.
               </p>
             </div>
 
@@ -284,28 +280,24 @@ export default function HomePage() {
       {/* Dark Section - CTA with Ocean Depth Effect */}
       <section className="relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #001f3f 0%, #001529 100%)' }}>
         <div className="content-container text-section-center py-24 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">Ready to Service Your Gear?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">{t('home.cta.title')}</h2>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto text-white/90">
-            Contact us today for a detailed quote. No maintenance will be carried out without your approval.
+            {t('home.cta.subtitle')}
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
-              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">Email</p>
+              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">{t('home.cta.email')}</p>
               <p className="text-lg font-medium text-white">info@bulldiving.com</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
-              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">Phone</p>
-              <p className="text-lg font-medium text-white">+34 955 467 119</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
-              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">WhatsApp</p>
-              <p className="text-lg font-medium text-white">+34 747 41 85 10</p>
+              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">{t('home.cta.phone')}</p>
+              <p className="text-lg font-medium text-white">+1 (305) 522-7386</p>
             </div>
           </div>
 
           <Link href="/contact" className="btn text-lg px-10 py-4">
-            Get Your Free Quote
+            {t('home.cta.getQuote')}
           </Link>
         </div>
 

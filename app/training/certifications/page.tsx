@@ -151,13 +151,13 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      {/* Dark Section - Poseidon Certification */}
+      {/* Dark Section - CCR Certification */}
       <section className="section-dark">
         <div className="content-container">
           <div className="text-section-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Poseidon Rebreather Certification</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Rebreather Certification</h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
-              As a Poseidon Pro Academy, we offer comprehensive CCR training on SE7EN and MKVI rebreathers.
+              We offer comprehensive CCR training on various rebreather models from leading manufacturers.
             </p>
           </div>
 
@@ -169,13 +169,13 @@ export default function CertificationsPage() {
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Poseidon SE7EN certification
+                  Electronic CCR certification
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Poseidon MKVI certification
+                  Manual CCR certification
                 </li>
                 <li className="flex items-center gap-2">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -34,15 +34,15 @@ export default function EquipmentPage() {
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
               <h3 className="text-2xl font-bold mb-4">Rebreathers (CCR)</h3>
               <p className="text-gray-700 mb-4">
-                Closed-circuit rebreathers from leading manufacturers. We're an authorized Poseidon dealer 
-                and service center with certified technicians.
+                Closed-circuit rebreathers from leading manufacturers with authorized service center support
+                and certified technicians.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-gray-600">
                   <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Poseidon SE7EN & MKVI
+                  Multiple CCR models available
                 </li>
                 <li className="flex items-center gap-2 text-gray-600">
                   <svg className="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">

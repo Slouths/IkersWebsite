@@ -188,8 +188,8 @@ export default function WorkshopsPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <div>
-                    <p className="font-semibold">Poseidon units</p>
-                    <p className="text-sm text-gray-600">Hands-on with SE7EN/MKVI</p>
+                    <p className="font-semibold">CCR units</p>
+                    <p className="text-sm text-gray-600">Hands-on with various models</p>
                   </div>
                 </div>
               </div>

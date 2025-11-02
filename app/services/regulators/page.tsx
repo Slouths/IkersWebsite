@@ -32,21 +32,8 @@ export default function RegulatorsPage() {
             components, and replace worn parts to maintain <strong>optimal performance.</strong>
           </p>
 
-          <p className="text-lg md:text-xl font-bold mb-6">
-            As <strong>Official Poseidon Service Center</strong>, we specialize in Poseidon Regulators.
-          </p>
-
-          <div className="flex justify-center my-8">
-            <div className="w-32 h-32 md:w-40 md:h-40 relative opacity-80">
-              {/* Placeholder for Poseidon logo - you can replace with actual logo */}
-              <div className="w-full h-full rounded-full border-4 border-white/30 flex items-center justify-center">
-                <span className="text-white/50 text-xs text-center">POSEIDON<br/>PRO ACADEMY</span>
-              </div>
-            </div>
-          </div>
-
           <p className="text-lg md:text-xl">
-            However, we offer technical service for <strong>all types of brands</strong> such as
+            We offer technical service for <strong>all types of brands</strong> such as
             Scubapro, Mares, Cressi, Apeks, Aqualung, Beuchat, Hollis, Oceanic, and Seac.
           </p>
 

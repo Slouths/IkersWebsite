@@ -35,7 +35,7 @@ export default function DivingGearPage() {
             {[
               {
                 title: 'Regulators',
-                description: 'First and second stage regulators from Poseidon, Scubapro, Apeks, and more.',
+                description: 'First and second stage regulators from Scubapro, Apeks, Mares, and more.',
                 features: ['High-performance', 'Cold water rated', 'Professional grade']
               },
               {

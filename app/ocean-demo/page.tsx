@@ -15,7 +15,7 @@ export default function OceanHomePage() {
     {
       url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070',
       title: 'Certified Technicians',
-      subtitle: 'Official Poseidon Service Center with factory-trained specialists'
+      subtitle: 'Factory-trained specialists certified across all major brands'
     },
     {
       url: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=2074',
@@ -149,7 +149,7 @@ export default function OceanHomePage() {
             {[
               {
                 title: 'Regulators',
-                desc: 'Official Poseidon Service Center. Full maintenance for all brands.',
+                desc: 'Certified technicians. Full maintenance for all brands.',
                 link: '/services/regulators'
               },
               {
@@ -159,7 +159,7 @@ export default function OceanHomePage() {
               },
               {
                 title: 'CCR',
-                desc: 'Authorized rebreather servicing. Poseidon Pro Academy specialists.',
+                desc: 'Authorized rebreather servicing by certified specialists.',
                 link: '/services/ccr'
               },
               {
@@ -223,8 +223,7 @@ export default function OceanHomePage() {
               <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white/60 to-transparent"></div>
               <h3 className="text-2xl font-bold mb-4 text-white">Certified Technicians</h3>
               <p className="text-lg leading-relaxed text-white/80">
-                Our team includes factory-certified technicians trained by leading manufacturers. Official Poseidon Service Center
-                with expertise across all major brands.
+                Our team includes factory-certified technicians trained by leading manufacturers with expertise across all major brands.
               </p>
             </div>
 
@@ -300,18 +299,14 @@ export default function OceanHomePage() {
             Contact us today for a detailed quote. No maintenance will be carried out without your approval.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
               <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">Email</p>
               <p className="text-lg font-medium text-white">info@bulldiving.com</p>
             </div>
             <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
               <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">Phone</p>
-              <p className="text-lg font-medium text-white">+34 955 467 119</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20">
-              <p className="font-semibold mb-1 text-sm uppercase tracking-wider text-white/70">WhatsApp</p>
-              <p className="text-lg font-medium text-white">+34 747 41 85 10</p>
+              <p className="text-lg font-medium text-white">+1 (305) 522-7386</p>
             </div>
           </div>
 

@@ -37,9 +37,9 @@ export default function TeamPage() {
               {
                 name: 'Iker Orzaiz',
                 role: 'Owner & Lead Technician',
-                certifications: ['Poseidon Certified', 'Technical Diver', 'Service Specialist'],
-                bio: 'With over 15 years of experience, Iker is a Poseidon-certified technician and CCR specialist. He founded BullDiving to bring world-class equipment service to the diving community.',
-                specialties: ['CCR Service', 'Technical Equipment', 'Poseidon Systems']
+                certifications: ['Factory Certified', 'Technical Diver', 'Service Specialist'],
+                bio: 'With over 15 years of experience, Iker is a factory-certified technician and CCR specialist. He founded BullDiving to bring world-class equipment service to the diving community.',
+                specialties: ['CCR Service', 'Technical Equipment', 'Rebreather Systems']
               },
               {
                 name: 'Maria Rodriguez',
@@ -51,7 +51,7 @@ export default function TeamPage() {
               {
                 name: 'Carlos Jiménez',
                 role: 'Regulator Technician',
-                certifications: ['Factory Certified', 'Poseidon Service', 'Multi-Brand'],
+                certifications: ['Factory Certified', 'Advanced Service', 'Multi-Brand'],
                 bio: 'Carlos is factory-certified for multiple regulator brands. He handles all regulator servicing with precision and extensive knowledge of life support systems.',
                 specialties: ['Regulators', 'Emergency Systems', 'Testing & Calibration']
               }
@@ -146,11 +146,11 @@ export default function TeamPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                title: 'Poseidon Service Center',
-                desc: 'Official authorized service center for Poseidon equipment'
+                title: 'Certified Service Center',
+                desc: 'Authorized service center for all major equipment brands'
               },
               {
-                title: 'Poseidon Pro Academy',
+                title: 'Professional Training',
                 desc: 'Certified instructors for CCR training programs'
               },
               {

@@ -1,11 +1,14 @@
+'use client'
 import Link from 'next/link'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function ServicesPage() {
+  const { t } = useLanguage()
   const services = [
     {
       name: 'Regulators',
       slug: 'regulators',
-      desc: 'Comprehensive regulator maintenance through certified technicians. Official Poseidon Service Center servicing all major brands.',
+      desc: 'Comprehensive regulator maintenance through certified technicians servicing all major brands.',
       image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400'
     },
     {
@@ -23,7 +26,7 @@ export default function ServicesPage() {
     {
       name: 'CCR',
       slug: 'ccr',
-      desc: 'Comprehensive rebreather servicing with technicians following strict standards. Poseidon Pro Academy specialists.',
+      desc: 'Comprehensive rebreather servicing with certified technicians following strict manufacturer standards.',
       image: 'https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?q=80&w=400'
     },
     {
@@ -41,7 +44,7 @@ export default function ServicesPage() {
     {
       name: 'EBS',
       slug: 'ebs',
-      desc: 'Specialized maintenance and inspection for Emergency Breathing Systems with expertise in Poseidon EBS units.',
+      desc: 'Specialized maintenance and inspection for Emergency Breathing Systems with certified expertise.',
       image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400'
     }
   ]
@@ -106,23 +109,20 @@ export default function ServicesPage() {
       {/* Dark Section - Contact CTA */}
       <section className="section-dark">
         <div className="content-container text-section-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Service?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('services.need.title')}</h2>
           <p className="text-lg md:text-xl mb-8">
-            Contact us for a detailed quote. No maintenance will be carried out without prior acceptance.
+            {t('services.need.subtitle')}
           </p>
           <div className="mt-8 space-y-4">
             <p className="text-lg">
-              <strong>Email:</strong> info@bulldiving.com
+              <strong>{t('common.email')}:</strong> info@bulldiving.com
             </p>
             <p className="text-lg">
-              <strong>Phone:</strong> +34 955 467 119
-            </p>
-            <p className="text-lg">
-              <strong>WhatsApp:</strong> +34 747 41 85 10
+              <strong>{t('common.phone')}:</strong> +1 (305) 522-7386
             </p>
           </div>
           <div className="mt-12">
-            <button className="btn">Get in touch</button>
+            <Link href="/contact" className="btn">{t('services.need.getInTouch')}</Link>
           </div>
         </div>
       </section>

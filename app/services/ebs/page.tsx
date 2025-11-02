@@ -18,8 +18,8 @@ export default function EBSPage() {
       <section className="section-dark">
         <div className="content-container text-section-center">
           <p className="text-lg md:text-xl mb-6">
-            Specialized service center offering comprehensive maintenance and inspection for <strong>Emergency Breathing Systems (EBS)</strong>,
-            with particular expertise in Poseidon EBS units.
+            Specialized service center offering comprehensive maintenance and inspection for <strong>Emergency Breathing Systems (EBS)</strong>
+            for all major manufacturers and models.
           </p>
           <p className="text-lg md:text-xl mb-8">
             We maintain readiness to service other brands and models as well.

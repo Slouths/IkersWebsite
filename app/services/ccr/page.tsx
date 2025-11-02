@@ -21,17 +21,17 @@ export default function CCRPage() {
             Comprehensive rebreather servicing with technicians following strict standards for evaluation, maintenance, and repairs.
           </p>
           <p className="text-lg md:text-xl mb-8">
-            We specialize in <strong>Poseidon Rebreathers</strong> as a <strong>Poseidon Pro Academy</strong>.
+            Our certified technicians provide <strong>expert rebreather maintenance</strong> for all major manufacturers and models.
           </p>
 
           <div className="my-12 max-w-4xl mx-auto">
             <div className="bg-white/10 backdrop-blur rounded-lg p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-4">Specialized Poseidon Service</h3>
+              <h3 className="text-2xl font-bold mb-4">Specialized CCR Service</h3>
               <p className="text-lg mb-4">
-                The Poseidon MkVI and Se7en models require authorized maintenance every 104 weeks (tracked via POST Test 55).
+                Rebreather units require periodic authorized maintenance following manufacturer specifications to ensure optimal performance and safety.
               </p>
               <p className="text-lg">
-                Our comprehensive periodic maintenance package ensures your rebreather remains safe and mission-ready.
+                Our comprehensive maintenance packages ensure your rebreather remains safe and mission-ready.
               </p>
             </div>
           </div>
