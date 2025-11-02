@@ -148,12 +148,12 @@ export default function RegulatorsPage() {
           <div className="max-w-2xl mx-auto">
             <div className="mb-8">
               <p className="text-5xl md:text-6xl font-bold mb-2">
-                <span className="text-2xl font-normal">1st Stage</span> Maintenance: <span className="text-slate-700">$44</span>
+                <span className="text-2xl font-normal">1st Stage</span> Maintenance: <span className="text-brand">$44</span>
               </p>
             </div>
             <div className="mb-12">
               <p className="text-5xl md:text-6xl font-bold">
-                <span className="text-2xl font-normal">2nd Stage</span> Maintenance: <span className="text-slate-700">$22</span>
+                <span className="text-2xl font-normal">2nd Stage</span> Maintenance: <span className="text-brand">$22</span>
               </p>
             </div>
 

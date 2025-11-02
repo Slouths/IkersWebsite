@@ -80,8 +80,8 @@ export default function EBSPage() {
                 desc: 'Intermediate pressure fine-tuning and second-stage adjustment occur, followed by full functionality testing and leak verification before delivery.'
               }
             ].map((phase, index) => (
-              <div key={index} className="flex items-start gap-4 border-l-4 border-slate-700 pl-6 py-2">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold">
+              <div key={index} className="flex items-start gap-4 border-l-4 border-brand pl-6 py-2">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
                   {phase.number}
                 </div>
                 <div>
@@ -93,7 +93,7 @@ export default function EBSPage() {
           </div>
 
           <div className="mt-12 max-w-4xl mx-auto">
-            <div className="bg-slate-50 rounded-lg p-8 border-l-4 border-slate-700">
+            <div className="bg-slate-50 rounded-lg p-8 border-l-4 border-brand">
               <h3 className="text-2xl font-bold mb-4">Documentation & Transparency</h3>
               <p className="text-gray-700 text-lg">
                 Clients receive comprehensive photo documentation via a shared folder that tracks the entire maintenance journey from
@@ -113,7 +113,7 @@ export default function EBSPage() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-lg p-12">
               <svg
-                className="w-20 h-20 mx-auto mb-6 text-slate-700"
+                className="w-20 h-20 mx-auto mb-6 text-brand"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

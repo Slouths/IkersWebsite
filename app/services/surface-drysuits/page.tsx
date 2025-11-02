@@ -63,7 +63,7 @@ export default function SurfaceDrysuitsPage() {
               { number: '4', title: 'Enjoy', desc: 'Receive your restored drysuit ready for action.' }
             ].map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700 flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand flex items-center justify-center text-white text-2xl font-bold">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
@@ -97,7 +97,7 @@ export default function SurfaceDrysuitsPage() {
               ].map((item) => (
                 <div key={item.service} className="flex justify-between items-center border-b pb-3">
                   <span className="text-left">{item.service}</span>
-                  <span className="font-bold text-slate-700 text-xl">{item.price}</span>
+                  <span className="font-bold text-brand text-xl">{item.price}</span>
                 </div>
               ))}
             </div>

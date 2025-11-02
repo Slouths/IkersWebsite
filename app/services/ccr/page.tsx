@@ -62,7 +62,7 @@ export default function CCRPage() {
               'Circuit disinfection using Gigasept'
             ].map((feature) => (
               <div key={feature} className="flex items-start gap-3 p-4 border rounded-lg">
-                <svg className="w-6 h-6 text-slate-700 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-brand flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-gray-700">{feature}</span>
@@ -71,7 +71,7 @@ export default function CCRPage() {
           </div>
 
           <div className="mt-12 max-w-3xl mx-auto text-center">
-            <div className="bg-slate-50 border-l-4 border-slate-700 p-6 rounded">
+            <div className="bg-slate-50 border-l-4 border-brand p-6 rounded">
               <p className="font-semibold mb-2">Important Service Requirements:</p>
               <p className="text-gray-700">
                 Send the complete rebreather excluding BCD, wing, and harness. Estimated turnaround is 30 days from receipt.
@@ -97,7 +97,7 @@ export default function CCRPage() {
               ].map((item) => (
                 <div key={item.item} className="flex justify-between items-center border-b pb-4">
                   <span className="text-lg font-medium">{item.item}</span>
-                  <span className="text-2xl font-bold text-slate-700">{item.price}</span>
+                  <span className="text-2xl font-bold text-brand">{item.price}</span>
                 </div>
               ))}
             </div>

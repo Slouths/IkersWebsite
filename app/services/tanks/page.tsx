@@ -64,8 +64,8 @@ export default function TanksPage() {
                 desc: 'Post-reassembly testing verifies all components work correctly and meet safety standards.'
               }
             ].map((step) => (
-              <div key={step.number} className="flex items-start gap-4 border-l-4 border-slate-700 pl-6 py-4">
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-slate-700 flex items-center justify-center text-white text-2xl font-bold">
+              <div key={step.number} className="flex items-start gap-4 border-l-4 border-brand pl-6 py-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-brand flex items-center justify-center text-white text-2xl font-bold">
                   {step.number}
                 </div>
                 <div>
@@ -93,7 +93,7 @@ export default function TanksPage() {
               ].map((item) => (
                 <div key={item.service} className="flex justify-between items-center border-b pb-4">
                   <span className="text-xl font-medium">{item.service}</span>
-                  <span className="text-3xl font-bold text-slate-700">{item.price}</span>
+                  <span className="text-3xl font-bold text-brand">{item.price}</span>
                 </div>
               ))}
             </div>

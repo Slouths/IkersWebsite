@@ -49,7 +49,7 @@ export default function DrysuitsPage() {
               { number: '4', title: 'Return & Enjoy', desc: 'Repaired suits returned ready for use.' }
             ].map((step) => (
               <div key={step.number} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-700 flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand flex items-center justify-center text-white text-2xl font-bold">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>
@@ -83,7 +83,7 @@ export default function DrysuitsPage() {
               ].map((item) => (
                 <div key={item.service} className="flex justify-between items-center border-b pb-3">
                   <span className="text-left">{item.service}</span>
-                  <span className="font-bold text-slate-700 text-xl">{item.price}</span>
+                  <span className="font-bold text-brand text-xl">{item.price}</span>
                 </div>
               ))}
             </div>

@@ -98,8 +98,8 @@ export default function BCDPage() {
                 desc: 'Personalized report with photos documenting each step.'
               }
             ].map((step) => (
-              <div key={step.number} className="flex items-start gap-4 border-l-4 border-slate-700 pl-6 py-2">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold">
+              <div key={step.number} className="flex items-start gap-4 border-l-4 border-brand pl-6 py-2">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
                   {step.number}
                 </div>
                 <div>
@@ -126,7 +126,7 @@ export default function BCDPage() {
                     Includes diagnosis, leak test, cleaning, reassembly, and quality control
                   </p>
                 </div>
-                <div className="text-4xl font-bold text-slate-700">$44</div>
+                <div className="text-4xl font-bold text-brand">$44</div>
               </div>
             </div>
 

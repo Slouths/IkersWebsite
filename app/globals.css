@@ -7,9 +7,9 @@
    Example: --brand: 9 83 110;  (for #219EBC)
 */
 :root {
-  --brand: 30 41 59;              /* primary - dark slate */
+  --brand: 9 83 110;              /* primary - teal/cyan */
   --brand-foreground: 255 255 255;  /* on-primary text */
-  --brand-muted: 51 65 85;       /* soft tint for backgrounds */
+  --brand-muted: 218 229 233;       /* soft tint for backgrounds */
 }
 
 html, body {

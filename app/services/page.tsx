@@ -91,9 +91,9 @@ export default function ServicesPage() {
                   style={{ backgroundImage: `url(${s.image})` }}
                 />
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-slate-700 transition-colors">{s.name}</h3>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-brand transition-colors">{s.name}</h3>
                   <p className="text-gray-600 mb-4">{s.desc}</p>
-                  <p className="text-slate-700 font-medium">
+                  <p className="text-brand font-medium">
                     Learn more →
                   </p>
                 </div>

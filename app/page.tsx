@@ -118,10 +118,10 @@ export default function HomePage() {
                 href={service.link}
                 className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-slate-600 text-center"
               >
-                <div className="w-12 h-12 mx-auto rounded-lg bg-slate-700 flex items-center justify-center text-white font-bold text-xl mb-4 group-hover:bg-slate-800 transition-colors">
+                <div className="w-12 h-12 mx-auto rounded-lg bg-brand flex items-center justify-center text-white font-bold text-xl mb-4 group-hover:bg-brand/90 transition-colors">
                   {String(index + 1).padStart(2, '0')}
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-slate-700 transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-brand transition-colors">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
               </Link>
             ))}
