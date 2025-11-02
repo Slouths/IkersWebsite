@@ -35,7 +35,6 @@ export default function BCDPage() {
               {[
                 'Individual divers',
                 'Fire Departments',
-                'Guardia Civil\'s Specialized Underwater Activities Group (GEAS)',
                 'Professional diving companies',
                 'Diving clubs and centers'
               ].map((client) => (

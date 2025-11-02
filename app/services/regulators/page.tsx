@@ -52,8 +52,8 @@ export default function RegulatorsPage() {
               The regulator maintenance process ensures the perfect performance of your diving regulators.
             </p>
             <p className="text-lg mt-4">
-              We don't only maintain and repair equipment for individual divers. We can also work with various Fire Departments, GEAS
-              (Specialized Underwater Activities Group) of the Guardia Civil, professional diving companies, as well as diving clubs and centers,
+              We don't only maintain and repair equipment for individual divers. We can also work with various Fire Departments,
+              professional diving companies, as well as diving clubs and centers,
               to <strong>provide comprehensive maintenance</strong> for all their equipment.
             </p>
           </div>

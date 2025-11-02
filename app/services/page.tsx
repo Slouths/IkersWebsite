@@ -9,43 +9,43 @@ export default function ServicesPage() {
       name: 'Regulators',
       slug: 'regulators',
       desc: 'Comprehensive regulator maintenance through certified technicians servicing all major brands.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400'
+      image: '/regulator.jpg'
     },
     {
       name: 'Drysuits',
       slug: 'drysuits',
       desc: 'Specialized drysuit repair and restoration services to maintain your equipment in optimal condition.',
-      image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400'
+      image: '/dry%20suit.webp'
     },
     {
       name: 'Surface Drysuits',
       slug: 'surface-drysuits',
       desc: 'Trilaminate drysuit repairs for kayaking, kitesurfing, paddleboarding, sailing, and water rescue operations.',
-      image: 'https://images.unsplash.com/photo-1502933691298-84fc14542831?q=80&w=400'
+      image: '/surfacedrysuit.jpg'
     },
     {
       name: 'CCR',
       slug: 'ccr',
       desc: 'Comprehensive rebreather servicing with certified technicians following strict manufacturer standards.',
-      image: 'https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?q=80&w=400'
+      image: '/ccr.jpg'
     },
     {
       name: 'BCD',
       slug: 'bcd',
       desc: 'Specialized BCD maintenance for wings, sidemount, and buoyancy jackets to ensure diver safety.',
-      image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=400'
+      image: '/bcd.jpg'
     },
     {
       name: 'Tanks',
       slug: 'tanks',
       desc: 'Comprehensive maintenance and inspection services for scuba tanks with the highest standards of quality and precision.',
-      image: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?q=80&w=400'
+      image: '/tanks.jpg'
     },
     {
       name: 'EBS',
       slug: 'ebs',
       desc: 'Specialized maintenance and inspection for Emergency Breathing Systems with certified expertise.',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=400'
+      image: '/ebs.jpg'
     }
   ]
 

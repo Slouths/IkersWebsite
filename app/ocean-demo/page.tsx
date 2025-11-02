@@ -277,7 +277,6 @@ export default function OceanHomePage() {
               { title: 'Individual Divers', desc: 'Recreational and technical diving enthusiasts' },
               { title: 'Fire Departments', desc: 'Emergency response diving teams' },
               { title: 'Special Forces', desc: 'Military underwater operations units' },
-              { title: 'GEAS', desc: 'Specialized Underwater Activities Group, Guardia Civil' },
               { title: 'Diving Centers', desc: 'Professional schools and clubs' },
               { title: 'Commercial Divers', desc: 'Professional diving companies' }
             ].map((client) => (
