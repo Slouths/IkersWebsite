@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-export default function HomePage() {
+export default function OceanHomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const heroImages = [
@@ -113,20 +113,25 @@ export default function HomePage() {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
-            <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
+            <div className="text-center bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">15+</div>
               <p className="text-lg text-white/80">Years Experience</p>
             </div>
-            <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
+            <div className="text-center bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">1000+</div>
               <p className="text-lg text-white/80">Equipment Serviced</p>
             </div>
-            <div className="text-center bg-white/10 backdrop-blur rounded-xl p-8 border border-white/20">
+            <div className="text-center bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
               <div className="text-6xl font-bold mb-2 text-white">100%</div>
               <p className="text-lg text-white/80">Satisfaction Rate</p>
             </div>
           </div>
         </div>
+
+        {/* Bubble decorations */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-6 h-6 bg-white/15 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-white/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       </section>
 
       {/* Light Section - Services with Ocean Theme */}
@@ -186,10 +191,11 @@ export default function HomePage() {
               <Link
                 key={service.title}
                 href={service.link}
-                className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300 border border-gray-200"
+                className="group relative bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 border-l-4 border-[#001f3f] overflow-hidden"
               >
-                <h3 className="text-xl font-bold mb-3 text-[#001f3f]">{service.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{service.desc}</p>
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-[#001f3f]/5 to-transparent rounded-bl-full"></div>
+                <h3 className="text-xl font-bold mb-3 text-[#001f3f] relative z-10">{service.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed relative z-10">{service.desc}</p>
               </Link>
             ))}
           </div>
@@ -213,7 +219,8 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-t-4 border-white/50 overflow-hidden hover:bg-white/15 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white/60 to-transparent"></div>
               <h3 className="text-2xl font-bold mb-4 text-white">Certified Technicians</h3>
               <p className="text-lg leading-relaxed text-white/80">
                 Our team includes factory-certified technicians trained by leading manufacturers. Official Poseidon Service Center
@@ -221,7 +228,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-t-4 border-white/50 overflow-hidden hover:bg-white/15 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white/60 to-transparent"></div>
               <h3 className="text-2xl font-bold mb-4 text-white">Complete Transparency</h3>
               <p className="text-lg leading-relaxed text-white/80">
                 Follow your equipment's entire service journey through shared photo documentation. See every step from
@@ -229,7 +237,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-t-4 border-white/50 overflow-hidden hover:bg-white/15 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white/60 to-transparent"></div>
               <h3 className="text-2xl font-bold mb-4 text-white">Fast Turnaround</h3>
               <p className="text-lg leading-relaxed text-white/80">
                 Most services completed within 30 days. We understand you need your gear mission-ready. Rush service
@@ -237,7 +246,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+            <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-t-4 border-white/50 overflow-hidden hover:bg-white/15 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-white/60 to-transparent"></div>
               <h3 className="text-2xl font-bold mb-4 text-white">Quality Guarantee</h3>
               <p className="text-lg leading-relaxed text-white/80">
                 60-day satisfaction guarantee on all services. If our work doesn't meet your expectations, we'll adjust
@@ -272,9 +282,10 @@ export default function HomePage() {
               { title: 'Diving Centers', desc: 'Professional schools and clubs' },
               { title: 'Commercial Divers', desc: 'Professional diving companies' }
             ].map((client) => (
-              <div key={client.title} className="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-xl transition-all">
-                <h3 className="text-xl font-bold mb-2 text-[#001f3f]">{client.title}</h3>
-                <p className="text-gray-600">{client.desc}</p>
+              <div key={client.title} className="relative bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg p-6 border-l-4 border-[#001f3f] hover:shadow-2xl transition-all overflow-hidden">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#001f3f]/5 to-transparent rounded-bl-full"></div>
+                <h3 className="text-xl font-bold mb-2 text-[#001f3f] relative z-10">{client.title}</h3>
+                <p className="text-gray-600 relative z-10">{client.desc}</p>
               </div>
             ))}
           </div>

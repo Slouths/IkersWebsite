@@ -112,7 +112,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8 space-y-4">
             <p className="text-lg">
-              <strong>Email:</strong> info@tieronesupply.com
+              <strong>Email:</strong> info@bulldiving.com
             </p>
             <p className="text-lg">
               <strong>Phone:</strong> +34 955 467 119
